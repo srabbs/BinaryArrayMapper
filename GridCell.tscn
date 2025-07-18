@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc7ay2vvvjkk5"]
+
+[ext_resource type="Script" uid="uid://hoijbdv6l8pf" path="res://GridCell.gd" id="1_inp74"]
+
+[node name="GridCell" type="Button"]
+offset_right = 32.0
+offset_bottom = 32.0
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_inp74")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

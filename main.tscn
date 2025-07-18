@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu3yhg8c3lcpx"]
+
+[ext_resource type="Script" uid="uid://cryvosj1te3uh" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dmkhdrek7jkdn" path="res://camera_2d.gd" id="1_ig7tw"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+script = ExtResource("1_ig7tw")
+
+[node name="LineEdit_Width" type="LineEdit" parent="."]
+offset_right = 68.5625
+offset_bottom = 31.0
+placeholder_text = "Width"
+
+[node name="LineEdit_Height" type="LineEdit" parent="."]
+offset_top = 31.0
+offset_right = 68.5625
+offset_bottom = 62.0
+placeholder_text = "Height"
+
+[node name="GenerateButton" type="Button" parent="."]
+offset_top = 62.0
+offset_right = 127.0
+offset_bottom = 93.0
+text = "Generate Array"
+
+[node name="ExportButton" type="Button" parent="."]
+offset_top = 93.0
+offset_right = 118.0
+offset_bottom = 124.0
+text = "Export Array"
+
+[node name="GridParent" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 10.0
+offset_right = 846.0
+offset_bottom = 639.0
+
+[node name="SaveDialog" type="FileDialog" parent="."]
+filters = PackedStringArray("*.txt ; Text Files")
